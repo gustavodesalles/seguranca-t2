@@ -4,52 +4,52 @@ import java.math.BigInteger;
 import java.util.Random;
 
 public class MillerRabin {
-    private static final BigInteger menosUm = new BigInteger("-1");
-    private static final BigInteger zero = new BigInteger("0");
-    private static final BigInteger um = new BigInteger("1");
-    private static final BigInteger dois = new BigInteger("2");
 
-    private void factorNumber(BigInteger integer, BigInteger s, int d) {
-        s = zero;
-        BigInteger aux = integer.subtract(um);
-
-        while (aux.mod(dois).equals(zero)) {
-            aux = aux.divide(dois);
-            s.add(um);
+    // Adaptado do Cormen, com auxílio do ChatGPT; retorna "false" caso seja composto e "true" se provavelmente primo
+    public static boolean millerRabinTest(BigInteger n, int numRounds) {
+        // Casos mais simples (1 e 3)
+        if (n.compareTo(BigInteger.ONE) <= 0) {
+            return false;
+        } else if (n.compareTo(new BigInteger("3")) <= 0) {
+            return true;
         }
 
-        d = aux.intValue();
-    }
-
-    private BigInteger randomBigInteger(BigInteger n) { // https://stackoverflow.com/questions/2290057/how-to-generate-a-random-biginteger-value-in-java
-        Random rand = new Random();
-        BigInteger result = new BigInteger(n.bitLength(), rand);
-        while( result.compareTo(n) >= 0 ) {
-            result = new BigInteger(n.bitLength(), rand);
+        // Escreve n-1 no formato d * 2^s fatorando 2
+        int s = 0;
+        BigInteger d = n.subtract(BigInteger.ONE);
+        while (d.mod(BigInteger.TWO).equals(BigInteger.ZERO)) {
+            d = d.divide(BigInteger.TWO);
+            s++;
         }
-        return result;
-    }
 
-    public String millerRabinTest(BigInteger integer, int numRounds) { //adaptado do Cormen
-        BigInteger s = null;
-        int d = 0;
+        // Realiza os testes
+        Random rnd = new Random();
+        for (int i = 0; i < numRounds; i++) {
+            BigInteger a;
+            do {
+                a = new BigInteger(n.bitLength(), rnd); // gera um número aleatório de 2 a n-2
+            } while (a.compareTo(BigInteger.TWO) < 0 || a.compareTo(n.subtract(BigInteger.TWO)) > 0); // se a < 2 ou a > n-2, tenta de novo
 
-        if (integer.mod(dois).equals(zero)) return "composto";
-        factorNumber(integer, s, d);
+            // x = a^d mod n
+            BigInteger x = a.modPow(d, n);
 
-        BigInteger a = randomBigInteger(integer).add(dois);
-        BigInteger b = a.pow(d).mod(integer);
+            // Repete s vezes
+            boolean composto = true;
+            for (int j = 0; j < s; j++) {
+                x = x.modPow(BigInteger.TWO, n); // x = x² mod n
+                if (x.equals(BigInteger.ONE)) {
+                    return false;
+                } else if (x.equals(n.subtract(BigInteger.ONE))) { // se x ≠ 1 e x ≠ n-1, é composto
+                    composto = false;
+                    break;
+                }
+            }
 
-        if (b.mod(integer).equals(um)) return "provavelmente primo";
-
-        for (BigInteger i = zero; i.equals(s.subtract(um)); i.add(um)) {
-            if (b.mod(integer).equals(menosUm)) {
-                return "provavelmente primo";
-            } else {
-                b = b.pow(2).mod(integer);
+            if (composto) {
+                return false;
             }
         }
 
-        return "composto";
+        return true; // provavelmente é primo
     }
 }
