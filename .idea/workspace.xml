@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da7bec23-d8cc-4b83-ac05-61c4399f0fdb" name="Changes" comment="feat: MillerRabin (preciso testar)">
+    <list default="true" id="da7bec23-d8cc-4b83-ac05-61c4399f0fdb" name="Changes" comment="tudo testado">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trabalho/LCG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trabalho/LCG.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trabalho/MillerRabin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trabalho/MillerRabin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trabalho/SolovayStrassen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trabalho/SolovayStrassen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trabalho/Xorshift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trabalho/Xorshift.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +54,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.SolovayStrassen">
     <configuration name="LCG" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="trabalho.LCG" />
       <module name="seguranca-t2" />
@@ -64,8 +68,50 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MillerRabin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="trabalho.MillerRabin" />
+      <module name="seguranca-t2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="trabalho.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SolovayStrassen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="trabalho.SolovayStrassen" />
+      <module name="seguranca-t2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="trabalho.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Xorshift" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="trabalho.Xorshift" />
+      <module name="seguranca-t2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="trabalho.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SolovayStrassen" />
+        <item itemvalue="Application.MillerRabin" />
+        <item itemvalue="Application.Xorshift" />
         <item itemvalue="Application.LCG" />
       </list>
     </recent_temporary>
@@ -82,6 +128,8 @@
       <workItem from="1680608465057" duration="8000" />
       <workItem from="1680638776791" duration="4636000" />
       <workItem from="1680696214265" duration="7000" />
+      <workItem from="1681241173716" duration="5821000" />
+      <workItem from="1681256835382" duration="1545000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1680568166479</created>
@@ -106,6 +154,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
     <MESSAGE value="feat: MillerRabin (preciso testar)" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: MillerRabin (preciso testar)" />
+    <MESSAGE value="tudo testado" />
+    <option name="LAST_COMMIT_MESSAGE" value="tudo testado" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/trabalho/SolovayStrassen.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

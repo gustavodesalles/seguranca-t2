@@ -37,7 +37,7 @@ public class LCG {
 //        LCG lcg = new LCG(new BigInteger("7"), new BigInteger("4"), new BigInteger("9"), new BigInteger("3"));
         lcg.linearCongruentialGenerator();
         lcg.list.forEach(bigInteger -> System.out.println(bigInteger.toString()));
-//        System.out.println(lcg.m.toString());
+        System.out.println(lcg.m.toString());
     }
 
 }

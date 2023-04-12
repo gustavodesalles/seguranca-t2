@@ -32,15 +32,17 @@ public class MillerRabin {
 
             // x = a^d mod n
             BigInteger x = a.modPow(d, n);
+            if (x.equals(BigInteger.ONE) || x.equals(n.subtract(BigInteger.ONE))) continue;
 
             // Repete s vezes
             boolean composto = true;
             for (int j = 0; j < s; j++) {
                 x = x.modPow(BigInteger.TWO, n); // x = x² mod n
+
                 if (x.equals(BigInteger.ONE)) {
                     return false;
                 } else if (x.equals(n.subtract(BigInteger.ONE))) { // se x ≠ 1 e x ≠ n-1, é composto
-                    composto = false;
+                    composto = false; // provavelmente primo
                     break;
                 }
             }
@@ -51,5 +53,11 @@ public class MillerRabin {
         }
 
         return true; // provavelmente é primo
+    }
+
+    public static void main(String[] args) {
+//        System.out.println(millerRabinTest(BigInteger.TEN, 4));
+//        System.out.println(millerRabinTest(BigInteger.TWO, 1));
+        System.out.println(millerRabinTest(new BigInteger("23"), 5));
     }
 }
