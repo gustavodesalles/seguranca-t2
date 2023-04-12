@@ -28,7 +28,7 @@ public class SolovayStrassen {
     }
 
     private static int jacobiSymbol(BigInteger a, BigInteger n) {
-        // Calcula o símbolo de Jacobi (a/n)
+        // Calcula o símbolo de Jacobi (a/n). Retirado de https://www.johndcook.com/blog/2019/02/12/computing-jacobi-symbols/, em si adaptado de Bach e Shallit
         if (n.mod(BigInteger.TWO).equals(BigInteger.ZERO)) {
             throw new IllegalArgumentException("O módulo n deve ser ímpar");
         }
