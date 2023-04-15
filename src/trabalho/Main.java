@@ -1,0 +1,89 @@
+package trabalho;
+
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+
+    public static void main(String[] args) {
+//        List<LCG> lcgList = new ArrayList<>();
+//        String aStr = "16807";
+//        String cStr = "23";
+//        String seed = "7";
+//        lcgList.add(new LCG(aStr, cStr,40, seed));
+////        lcgList.add(new LCG(aStr, cStr,64, seed));
+////        lcgList.add(new LCG(aStr, cStr,128, seed));
+////        lcgList.add(new LCG(aStr, cStr,168, seed));
+////        lcgList.add(new LCG(aStr, cStr,224, seed));
+////        lcgList.add(new LCG(aStr, cStr,256, seed));
+////        lcgList.add(new LCG(aStr, cStr,512, seed));
+////        lcgList.add(new LCG(aStr, cStr,1024, seed));
+////        lcgList.add(new LCG(aStr, cStr,2048, seed));
+////        lcgList.add(new LCG(aStr, cStr,4096, seed));
+////
+////        for (LCG lcg : lcgList) {
+////            long startTime = System.nanoTime();
+////            lcg.linearCongruentialGenerator();
+////            long endTime = System.nanoTime();
+////            System.out.println((endTime - startTime)/10);
+////        }
+//
+//        List<Integer> numeros = new ArrayList<>();
+//        numeros.add(40);
+//        numeros.add(64);
+//        numeros.add(128);
+//        numeros.add(168);
+//        numeros.add(224);
+//        numeros.add(256);
+//        numeros.add(512);
+//        numeros.add(1024);
+//        numeros.add(2048);
+//        numeros.add(4096);
+//
+//        List<BigInteger> possiveisPrimos = new ArrayList<>();
+////        for (int numero : numeros) {
+////            long startTime = System.nanoTime();
+//            for (int j = 0; j < 500; j++) {
+////                possiveisPrimos.add(Xorshift.xorshift(40));
+////                possiveisPrimos.add(Xorshift.xorshift(64));
+////                possiveisPrimos.add(Xorshift.xorshift(128));
+////                possiveisPrimos.add(Xorshift.xorshift(168));
+////                possiveisPrimos.add(Xorshift.xorshift(224));
+////                possiveisPrimos.add(Xorshift.xorshift(256));
+////                possiveisPrimos.add(Xorshift.xorshift(512));
+////                possiveisPrimos.add(Xorshift.xorshift(1024));
+////                possiveisPrimos.add(Xorshift.xorshift(2048));
+//                possiveisPrimos.add(Xorshift.xorshift(4096));
+//            }
+////            long endTime = System.nanoTime();
+////            System.out.println((endTime - startTime)/10);
+////        }
+//
+//        for (BigInteger bigInteger : possiveisPrimos) {
+//            if (MillerRabin.millerRabinTest(bigInteger, 20)) {
+//                System.out.println(bigInteger);
+//            }
+//        }
+
+        List<BigInteger> primos = new ArrayList<>();
+        primos.add(new BigInteger("19087420119222418433"));
+        primos.add(new BigInteger("434071456459440324044520577"));
+        primos.add(new BigInteger("11301818878203719874315579370486498938570276379"));
+        primos.add(new BigInteger("7879590276683458904616449685373020706943958657744910400609"));
+        primos.add(new BigInteger("796994913410045902882005226596372700659136044580617605741340642367797042961"));
+        primos.add(new BigInteger("2356699380213219550154969579293059384443471110551184454810747553548800991298605482993"));
+        primos.add(new BigInteger("34042856143189421232041919367901685509700144854069338483776205056705989774515850323639093555008270271411959589535944584865567807685908069532417862382389549517297"));
+        primos.add(new BigInteger("4188456608814328667941553583012816522522896984457538748250298120589586549012835671872521964934609474292662489504566818586111656088495042734546053087097077628143923222110644907278251457557315164648361055328659753313170604024286639925977511834507173141827708174825627817449169554030703541529115912035529455361658949003"));
+        primos.add(new BigInteger("524694142383707939199015639678619044761735845232809476289559237150984232343268932301276401199509392162387492860642142231237257699001066838780302997526474388529424920512782987699222266460066190853150219108713514839023033679295352861924840976478143055745388289464516280858941786309010372655450117817674485460154515608930828836139966881527887024030965597235648332328495205309271941992557976337068174751724067723933552794579456700148699742584399656289956117148293388448254735395793924817884475922798014902304058878149094511107994948442343538180563160544644285157772364258637705604818917685325352998746812154232084185339647965811"));
+        primos.add(new BigInteger("2488087319421169819905550166645076959912930787821451135791213239292438600315211807660593516987023598477907348671544534560827337674303848734348872132544950672097467924894124569112733526888887204994079131020025365492056481347513288181577354125016281673606910058982797162370679978599087424228335002748194503129824761555413347940425661087774651373826013197524741515077510970951026026232940751780084208070130519445745971875375698163361256869117079148170268487985598385615408820676893335009308680468997412047777858090181868390109386097274650189413677369629297496602181525132001884558432788114829140243155625429283012602411204349417833210606107967594585306162254464382100945491564786186846606164336935443216834714627001648709980658030501713318320958677271440584430174250709057109442489328487846070832902348347934819539153227606297351382586743978596233380005536949586652116068510307560574871867250932414490358504790617139543216500785545142103401050804664185559338290737927972333882668865997974275189162042440148821207237669679045522771297094518781512922172265955941471042528193152075648581199014300287662184283833523857799628311555349027682705811321118572707249208401077873099958867707371255888981958861596391780889301510398141986331809190664721353"));
+
+        for (BigInteger primo : primos) {
+            long startTime = System.nanoTime();
+            System.out.println(MillerRabin.millerRabinTest(primo, 20));
+//            System.out.println(SolovayStrassen.solovayStrassenTest(primo, 20));
+            long endTime = System.nanoTime();
+            System.out.println(endTime - startTime);
+        }
+    }
+}

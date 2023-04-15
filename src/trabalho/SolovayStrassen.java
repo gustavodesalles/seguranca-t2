@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class SolovayStrassen {
 
-    // Adaptado do seguinte link: http://math.ucdenver.edu/~wcherowi/courses/m5410/ctcprime.html
+    // Adaptado do livro do Stinson; retorna "false" caso seja composto e "true" se provavelmente primo
     public static boolean solovayStrassenTest(BigInteger n, int numRounds) {
         // casos base
         if (n.equals(BigInteger.TWO) || n.equals(BigInteger.valueOf(3))) return true; // caso seja 2 ou 3, é primo

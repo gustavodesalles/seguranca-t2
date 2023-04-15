@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da7bec23-d8cc-4b83-ac05-61c4399f0fdb" name="Changes" comment="tudo testado">
+      <change afterPath="$PROJECT_DIR$/src/trabalho/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trabalho/LCG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trabalho/LCG.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trabalho/MillerRabin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trabalho/MillerRabin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trabalho/SolovayStrassen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trabalho/SolovayStrassen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trabalho/Xorshift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trabalho/Xorshift.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,9 +51,22 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.SolovayStrassen">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="LCG" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="trabalho.LCG" />
+      <module name="seguranca-t2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="trabalho.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="trabalho.Main" />
       <module name="seguranca-t2" />
       <extension name="coverage">
         <pattern>
@@ -109,6 +119,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.SolovayStrassen" />
         <item itemvalue="Application.MillerRabin" />
         <item itemvalue="Application.Xorshift" />
@@ -129,7 +140,11 @@
       <workItem from="1680638776791" duration="4636000" />
       <workItem from="1680696214265" duration="7000" />
       <workItem from="1681241173716" duration="5821000" />
-      <workItem from="1681256835382" duration="1545000" />
+      <workItem from="1681256835382" duration="1928000" />
+      <workItem from="1681298993140" duration="10000" />
+      <workItem from="1681426598341" duration="4679000" />
+      <workItem from="1681488038852" duration="10000" />
+      <workItem from="1681501970112" duration="3730000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1680568166479</created>
@@ -145,7 +160,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680656138204</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="tudo testado">
+      <created>1681259178439</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1681259178439</updated>
+    </task>
+    <task id="LOCAL-00004" summary="tudo testado">
+      <created>1681259306108</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681259306108</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

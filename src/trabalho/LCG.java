@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LCG {
-    private BigInteger a = new BigInteger("16807");
+    private BigInteger a;
     private BigInteger c;
     private BigInteger m;
     private BigInteger xo;
@@ -25,7 +25,7 @@ public class LCG {
         this.xo = xo;
     }
 
-    public void linearCongruentialGenerator() {
+    public void linearCongruentialGenerator() { //
         for (int i = 0; i < 10; i++) { //gera dez números pseudo-aleatórios a partir da seed
             xo = xo.multiply(a).add(c).mod(m);
             list.add(xo);
