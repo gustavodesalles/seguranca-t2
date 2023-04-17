@@ -27,7 +27,7 @@ public class LCG {
 
     public void linearCongruentialGenerator() { //
         for (int i = 0; i < 10; i++) { //gera dez números pseudo-aleatórios a partir da seed
-            xo = xo.multiply(a).add(c).mod(m);
+            xo = xo.multiply(a).add(c).mod(m); // x[n] = (x[n-1] * a + c) mod m
             list.add(xo);
         }
     }
